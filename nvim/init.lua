@@ -63,12 +63,18 @@ bufferline.setup {
 -- mason
 require("mason").setup()
 require("mason-lspconfig").setup()
+require("configs.lspconfig")
+local lspconf = require "configs.lspconfig"
 require("mason-lspconfig").setup_handlers {
-        -- The first entry (without a key) will be the default handler
+	-- The first entry (without a key) will be the default handler
         -- and will be called for each installed server that doesn't have
         -- a dedicated handler.
         function (server_name) -- default handler (optional)
-            require("lspconfig")[server_name].setup {}
+            require("lspconfig")[server_name].setup {
+    		--on_attach = lspconf.on_attach,
+    		--on_init = lspconf.on_init,
+   		  --capabilities = lspconf.capabilities,
+	    }
         end,
     }
 --

@@ -125,9 +125,10 @@ Shift_L + alt
 ## CUMSTOM
 
 # Run apps
-super + shift + {c,p}
+super + shift + {c,p,t}
 	{google-chrome-stable, \
-	google-chrome-stable --incognito}
+	google-chrome-stable --incognito \
+  telegram-desktop \}
 
 # screenshot
 Print

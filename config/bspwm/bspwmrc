@@ -32,6 +32,7 @@ bspc config pointer_action3 resize_corner
 xrdb merge ~/.Xresources
 
 $HOME/.config/polybar/launch.sh &
+pgrep -x redshift > /dev/null || redshift &
 
 picom --config $HOME/.config/picom/1.conf &
 

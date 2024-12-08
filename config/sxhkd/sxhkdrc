@@ -134,5 +134,9 @@ super + shift + {c,p,t}
 Print
     flameshot gui
 
+# Volume
+super + F10
+  $HOME/bin/change_volume.sh
 
-
+super + F11
+  $HOME/bin/change_volume.sh incr

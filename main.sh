@@ -17,7 +17,7 @@ cp ./xinitrc $HOME/.xinitrc
 cp ./Xresources $HOME/.Xresources
 
 echo "Installing main packages..."
-PACMAN_PACKAGES=(base-devel curl wget fontconfig git vim neovim zsh openssl openssh kitty alacritty xorg xorg-server xorg-xinit bspwm sxhkd feh picom polybar rofi bat fzf lsd ripgrep zoxide ranger flameshot arandr neofetch unzip redshift);
+PACMAN_PACKAGES=(base-devel curl wget fontconfig git vim neovim zsh openssl openssh kitty alacritty xorg xorg-server xorg-xinit bspwm sxhkd feh picom polybar rofi bat fzf lsd ripgrep zoxide ranger flameshot arandr neofetch unzip redshift xsel helvum);
 
 sudo pacman -Syu && sudo pacman -Sy "${PACMAN_PACKAGES[@]}" --needed &&
 

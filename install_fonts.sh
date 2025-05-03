@@ -4,19 +4,14 @@ declare -a fonts=(
     CodeNewRoman
     FiraCode
     FiraMono
-    Go-Mono
     Hack
-    Hermit
     JetBrainsMono
-    Meslo
     SourceCodePro
     SpaceMono
-    Ubuntu
-    UbuntuMono
 )
 
 version='3.3.0'
-fonts_dir="/usr/share/fonts/my/"
+fonts_dir="/home/chetvertanovskiy/.local/share/fonts/"
 
 if [[ ! -d "$fonts_dir" ]]; then
     mkdir -p "$fonts_dir"
@@ -27,7 +22,7 @@ for font in "${fonts[@]}"; do
     download_url="https://github.com/ryanoasis/nerd-fonts/releases/download/v${version}/${zip_file}"
     echo "Downloading $download_url"
     wget "$download_url"
-    unzip "$zip_file" -d -o "$fonts_dir"
+    unzip "$zip_file" -d "$fonts_dir"
     rm "$zip_file"
 done
 
